@@ -5,53 +5,540 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>V-Phone - Register</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Additional styles for the registration page */
+    .register-container {
+      width: 90%;
+      max-width: 600px;
+      margin: 3rem auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 2rem;
+    }
+
+    .register-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .register-header h2 {
+      color: var(--primary-dark);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .register-header p {
+      color: #64748b;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .gender-options {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .gender-option {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .gender-option input[type="radio"] {
+      width: auto;
+    }
+
+    .password-field {
+      position: relative;
+    }
+
+    .password-toggle {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #64748b;
+      cursor: pointer;
+    }
+
+    .register-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    .register-btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .form-footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #64748b;
+    }
+
+    .form-footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .error-message {
+      color: #dc2626;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      display: none;
+    }
+
+    .input-error {
+      border-color: #dc2626 !important;
+    }
+
+    .input-success {
+      border-color: var(--secondary-color) !important;
+    }
+
+    .success-icon, .error-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: none;
+    }
+
+    .success-icon {
+      color: var(--secondary-color);
+    }
+
+    .error-icon {
+      color: #dc2626;
+    }
+
+    .form-field {
+      position: relative;
+    }
+
+    @media screen and (max-width: 480px) {
+      .register-container {
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>V-Phone</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="promotion.html">Promotion</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="register.html" class="active">Register</a></li>
-      </ul>
-    </nav>
+    <div class="container header-content">
+      <div class="logo">
+        <i class="fas fa-mobile-alt"></i>
+        <span>V-Phone</span>
+      </div>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="promotion.html">Promotion</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="register.html" class="active">Register</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <form id="register-form" class="register-form">
-      <h2>Register</h2>
-      
-      <label for="name">Nama Lengkap:</label>
-      <input type="text" id="name" required>
-      
-      <label>Gender:</label>
-      <div class="gender-options">
-        <input type="radio" id="male" name="gender" value="male" required>
-        <label for="male">Pria</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Wanita</label>
+    <div class="container">
+      <div class="register-container">
+        <div class="register-header">
+          <h2>Create Account</h2>
+          <p>Join the V-Phone community today</p>
+        </div>
+        
+        <form id="register-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <div class="form-field">
+              <input type="text" id="name" placeholder="Enter your full name" required>
+              <i class="fas fa-check success-icon"></i>
+              <i class="fas fa-times error-icon"></i>
+            </div>
+            <div class="error-message" id="name-error">Name cannot be empty</div>
+          </div>
+          
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="gender-options">
+              <div class="gender-option">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+              </div>
+              <div class="gender-option">
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+              </div>
+            </div>
+            <div class="error-message" id="gender-error">Please select a gender</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="form-field">
+              <input type="email" id="email" placeholder="example@email.com" required>
+              <i class="fas fa-check success-icon"></i>
+              <i class="fas fa-times error-icon"></i>
+            </div>
+            <div class="error-message" id="email-error">Please enter a valid email</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="form-field password-field">
+              <input type="password" id="password" placeholder="Enter your password" minlength="8" required>
+              <button type="button" class="password-toggle" id="toggle-password">
+                <i class="fas fa-eye"></i>
+              </button>
+              <i class="fas fa-check success-icon"></i>
+              <i class="fas fa-times error-icon"></i>
+            </div>
+            <div class="error-message" id="password-error">Password must be at least 8 characters</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <div class="form-field password-field">
+              <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+              <button type="button" class="password-toggle" id="toggle-confirm-password">
+                <i class="fas fa-eye"></i>
+              </button>
+              <i class="fas fa-check success-icon"></i>
+              <i class="fas fa-times error-icon"></i>
+            </div>
+            <div class="error-message" id="confirm-password-error">Passwords do not match</div>
+          </div>
+          
+          <button type="submit" class="register-btn">Register</button>
+          
+          <div class="form-footer">
+            <p>Already have an account? <a href="login.html">Login</a></p>
+          </div>
+        </form>
       </div>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" required>
-      
-      <label for="password">Password:</label>
-      <input type="password" id="password" minlength="8" required>
-      
-      <label for="confirm-password">Konfirmasi Password:</label>
-      <input type="password" id="confirm-password" required>
-      
-      <button type="submit">Daftar</button>
-    </form>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2023 V-Phone. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>V-Phone</h3>
+          <p>Trusted smartphone store with quality products at competitive prices.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul class="footer-links">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Smartphone St. No.123, Jakarta</li>
+            <li><i class="fas fa-phone"></i> +62 123 4567 890</li>
+            <li><i class="fas fa-envelope"></i> info@vphone.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 V-Phone. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
-  <script src="js/register.js"></script>
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('nav');
+    
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+      });
+    }
+
+    // Password visibility toggle
+    const togglePassword = document.getElementById('toggle-password');
+    const toggleConfirmPassword = document.getElementById('toggle-confirm-password');
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+    
+    togglePassword.addEventListener('click', function() {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      this.querySelector('i').classList.toggle('fa-eye');
+      this.querySelector('i').classList.toggle('fa-eye-slash');
+    });
+    
+    toggleConfirmPassword.addEventListener('click', function() {
+      const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      confirmPasswordInput.setAttribute('type', type);
+      this.querySelector('i').classList.toggle('fa-eye');
+      this.querySelector('i').classList.toggle('fa-eye-slash');
+    });
+
+    // Form validation
+    const form = document.getElementById('register-form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const genderInputs = document.querySelectorAll('input[name="gender"]');
+    
+    // Show error message
+    function showError(input, message) {
+      const formField = input.parentElement;
+      const errorDisplay = formField.nextElementSibling;
+      
+      // Add error classes
+      input.classList.add('input-error');
+      input.classList.remove('input-success');
+      
+      // Show error icon
+      if (formField.querySelector('.error-icon')) {
+        formField.querySelector('.error-icon').style.display = 'block';
+        formField.querySelector('.success-icon').style.display = 'none';
+      }
+      
+      // Show error message
+      errorDisplay.textContent = message;
+      errorDisplay.style.display = 'block';
+      
+      return false;
+    }
+    
+    // Show success 
+    function showSuccess(input) {
+      const formField = input.parentElement;
+      const errorDisplay = formField.nextElementSibling;
+      
+      // Add success classes
+      input.classList.remove('input-error');
+      input.classList.add('input-success');
+      
+      // Show success icon
+      if (formField.querySelector('.success-icon')) {
+        formField.querySelector('.success-icon').style.display = 'block';
+        formField.querySelector('.error-icon').style.display = 'none';
+      }
+      
+      // Hide error message
+      errorDisplay.style.display = 'none';
+      
+      return true;
+    }
+    
+    // Check if email is valid
+    function isValidEmail(email) {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    }
+    
+    // Check name
+    function checkName() {
+      let valid = false;
+      const name = nameInput.value.trim();
+      
+      if (name === '') {
+        showError(nameInput, 'Name cannot be empty');
+      } else if (name.length < 3) {
+        showError(nameInput, 'Name must be at least 3 characters');
+      } else {
+        showSuccess(nameInput);
+        valid = true;
+      }
+      
+      return valid;
+    }
+    
+    // Check email
+    function checkEmail() {
+      let valid = false;
+      const email = emailInput.value.trim();
+      
+      if (email === '') {
+        showError(emailInput, 'Email cannot be empty');
+      } else if (!isValidEmail(email)) {
+        showError(emailInput, 'Please enter a valid email format');
+      } else {
+        showSuccess(emailInput);
+        valid = true;
+      }
+      
+      return valid;
+    }
+    
+    // Check gender
+    function checkGender() {
+      let valid = false;
+      const genderError = document.getElementById('gender-error');
+      
+      // Check if any gender is selected
+      for (const genderInput of genderInputs) {
+        if (genderInput.checked) {
+          valid = true;
+          break;
+        }
+      }
+      
+      if (!valid) {
+        genderError.style.display = 'block';
+      } else {
+        genderError.style.display = 'none';
+      }
+      
+      return valid;
+    }
+    
+    // Check password
+    function checkPassword() {
+      let valid = false;
+      const password = passwordInput.value.trim();
+      
+      if (password === '') {
+        showError(passwordInput, 'Password cannot be empty');
+      } else if (password.length < 8) {
+        showError(passwordInput, 'Password must be at least 8 characters');
+      } else {
+        showSuccess(passwordInput);
+        valid = true;
+      }
+      
+      return valid;
+    }
+    
+    // Check password confirmation
+    function checkConfirmPassword() {
+      let valid = false;
+      const password = passwordInput.value.trim();
+      const confirmPassword = confirmPasswordInput.value.trim();
+      
+      if (confirmPassword === '') {
+        showError(confirmPasswordInput, 'Confirm password cannot be empty');
+      } else if (confirmPassword !== password) {
+        showError(confirmPasswordInput, 'Passwords do not match');
+      } else {
+        showSuccess(confirmPasswordInput);
+        valid = true;
+      }
+      
+      return valid;
+    }
+    
+    // Add event listeners for real-time validation
+    nameInput.addEventListener('blur', checkName);
+    emailInput.addEventListener('blur', checkEmail);
+    passwordInput.addEventListener('blur', checkPassword);
+    confirmPasswordInput.addEventListener('blur', checkConfirmPassword);
+    
+    // For gender, we'll check on form submit
+    genderInputs.forEach(input => {
+      input.addEventListener('change', checkGender);
+    });
+    
+    // Form submit event
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Validate all fields
+      let isNameValid = checkName(),
+          isEmailValid = checkEmail(),
+          isGenderValid = checkGender(),
+          isPasswordValid = checkPassword(),
+          isConfirmPasswordValid = checkConfirmPassword();
+      
+      let isFormValid = isNameValid && 
+                        isEmailValid && 
+                        isGenderValid && 
+                        isPasswordValid && 
+                        isConfirmPasswordValid;
+      
+      // If all validations pass
+      if (isFormValid) {
+        // Here you'd typically submit the form to your server
+        alert('Registration successful! Thank you for signing up.');
+        form.reset();
+        
+        // Reset success indicators
+        const successInputs = document.querySelectorAll('.input-success');
+        successInputs.forEach(input => {
+          input.classList.remove('input-success');
+        });
+        
+        const successIcons = document.querySelectorAll('.success-icon');
+        successIcons.forEach(icon => {
+          icon.style.display = 'none';
+        });
+      }
+    });
+  </script>
 </body>
 </html>
