@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V-Phone - Register</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>V-Phone</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="promotion.html">Promotion</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="register.html" class="active">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form id="register-form" class="register-form">
+      <h2>Register</h2>
+      
+      <label for="name">Nama Lengkap:</label>
+      <input type="text" id="name" required>
+      
+      <label>Gender:</label>
+      <div class="gender-options">
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Pria</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Wanita</label>
+      </div>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" minlength="8" required>
+      
+      <label for="confirm-password">Konfirmasi Password:</label>
+      <input type="password" id="confirm-password" required>
+      
+      <button type="submit">Daftar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 V-Phone. All rights reserved.</p>
+  </footer>
+
+  <script src="js/register.js"></script>
+</body>
+</html>

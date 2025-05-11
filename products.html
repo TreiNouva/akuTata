@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V-Phone - Products</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>V-Phone</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="promotion.html">Promotion</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-filter">
+      <button onclick="filterProducts('all')">All</button>
+      <button onclick="filterProducts('gaming')">Gaming</button>
+      <button onclick="filterProducts('camera')">Camera</button>
+      <button onclick="filterProducts('budget')">Budget</button>
+    </section>
+
+    <section class="product-list">
+      <!-- Produk akan diisi oleh JavaScript -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 V-Phone. All rights reserved.</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+</body>
+</html>
