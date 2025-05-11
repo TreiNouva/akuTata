@@ -127,21 +127,21 @@ nav a.active {
 
 .slide:nth-child(1) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/img/w273.png");
+    url("../assets/img/64383045de35c.jpg");
   background-size: contain;
   background-position: center;
 }
 
 .slide:nth-child(2) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/img/w273 (1).png");
+    url("../assets/img/6438304605d82.jpg");
   background-size: contain;
   background-position: center;
 }
 
 .slide:nth-child(3) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/img/w273 (2).png");
+    url("../assets/img/64ad23e2d49b2.jpg");
   background-size: contain;
   background-position: center;
 }

@@ -3,40 +3,408 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>V-Phone - Products</title>
+  <title>V-Phone - Premium Smartphones & Accessories</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
+  <!-- Header Section -->
   <header>
-    <h1>V-Phone</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html" class="active">Products</a></li>
-        <li><a href="promotion.html">Promotion</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="register.html">Register</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <i class="fas fa-mobile-alt"></i>
+          <span>V-Phone</span>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="products.html" class="active"><i class="fas fa-mobile"></i> Products</a></li>
+            <li><a href="promotion.html"><i class="fas fa-percent"></i> Promotion</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="product-filter">
-      <button onclick="filterProducts('all')">All</button>
-      <button onclick="filterProducts('gaming')">Gaming</button>
-      <button onclick="filterProducts('camera')">Camera</button>
-      <button onclick="filterProducts('budget')">Budget</button>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h2>Discover Our Premium Smartphones</h2>
+        <p>Explore our wide range of cutting-edge devices designed to fit your lifestyle and budget. From photography enthusiasts to gaming aficionados, we have the perfect smartphone for you.</p>
+        <a href="#product-categories" class="btn"><i class="fas fa-search"></i> Browse Collection</a>
+      </div>
     </section>
 
-    <section class="product-list">
-      <!-- Produk akan diisi oleh JavaScript -->
+    <!-- Product Filter Section -->
+    <section class="container" id="product-categories">
+      <h2 class="section-title">Our Products</h2>
+      <div class="product-filter">
+        <button class="filter-btn active" data-filter="all"><i class="fas fa-border-all"></i> All Products</button>
+        <button class="filter-btn" data-filter="gaming"><i class="fas fa-gamepad"></i> Gaming</button>
+        <button class="filter-btn" data-filter="camera"><i class="fas fa-camera"></i> Camera</button>
+        <button class="filter-btn" data-filter="budget"><i class="fas fa-wallet"></i> Budget</button>
+        <button class="filter-btn" data-filter="flagship"><i class="fas fa-crown"></i> Flagship</button>
+      </div>
+    </section>
+
+    <!-- Product List Section -->
+    <section class="container">
+      <div class="product-list" id="product-list">
+        <!-- Product 1 -->
+        <div class="product-card" data-category="gaming flagship">
+          <span class="product-badge">New</span>
+          <div class="product-img">
+            <img src="/api/placeholder/400/320" alt="V-Phone Gaming Pro">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">V-Phone Gaming Pro</h3>
+            <div class="product-price">$899.99</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(128)</span>
+            </div>
+            <div class="product-features">
+              <span class="product-feature"><i class="fas fa-microchip"></i> 8GB RAM</span>
+              <span class="product-feature"><i class="fas fa-memory"></i> 256GB</span>
+              <span class="product-feature"><i class="fas fa-battery-full"></i> 5000mAh</span>
+            </div>
+            <div class="product-actions">
+              <a href="#" class="product-btn">Add to Cart</a>
+              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              <button class="compare-btn"><i class="fas fa-exchange-alt"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-category="camera flagship">
+          <div class="product-img">
+            <img src="/api/placeholder/400/320" alt="V-Phone Camera Max">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">V-Phone Camera Max</h3>
+            <div class="product-price">$799.99</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(95)</span>
+            </div>
+            <div class="product-features">
+              <span class="product-feature"><i class="fas fa-camera"></i> 108MP</span>
+              <span class="product-feature"><i class="fas fa-memory"></i> 128GB</span>
+              <span class="product-feature"><i class="fas fa-battery-full"></i> 4500mAh</span>
+            </div>
+            <div class="product-actions">
+              <a href="#" class="product-btn">Add to Cart</a>
+              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              <button class="compare-btn"><i class="fas fa-exchange-alt"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-category="budget">
+          <span class="product-badge">Best Seller</span>
+          <div class="product-img">
+            <img src="/api/placeholder/400/320" alt="V-Phone Lite">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">V-Phone Lite</h3>
+            <div class="product-price">$299.99</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>(210)</span>
+            </div>
+            <div class="product-features">
+              <span class="product-feature"><i class="fas fa-microchip"></i> 4GB RAM</span>
+              <span class="product-feature"><i class="fas fa-memory"></i> 64GB</span>
+              <span class="product-feature"><i class="fas fa-battery-full"></i> 4000mAh</span>
+            </div>
+            <div class="product-actions">
+              <a href="#" class="product-btn">Add to Cart</a>
+              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              <button class="compare-btn"><i class="fas fa-exchange-alt"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" data-category="camera budget">
+          <div class="product-img">
+            <img src="/api/placeholder/400/320" alt="V-Phone Camera Lite">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">V-Phone Camera Lite</h3>
+            <div class="product-price">$399.99</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+              <span>(87)</span>
+            </div>
+            <div class="product-features">
+              <span class="product-feature"><i class="fas fa-camera"></i> 64MP</span>
+              <span class="product-feature"><i class="fas fa-memory"></i> 128GB</span>
+              <span class="product-feature"><i class="fas fa-battery-full"></i> 4200mAh</span>
+            </div>
+            <div class="product-actions">
+              <a href="#" class="product-btn">Add to Cart</a>
+              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              <button class="compare-btn"><i class="fas fa-exchange-alt"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card" data-category="gaming">
+          <div class="product-img">
+            <img src="/api/placeholder/400/320" alt="V-Phone Gaming Lite">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">V-Phone Gaming Lite</h3>
+            <div class="product-price">$599.99</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>(156)</span>
+            </div>
+            <div class="product-features">
+              <span class="product-feature"><i class="fas fa-microchip"></i> 6GB RAM</span>
+              <span class="product-feature"><i class="fas fa-memory"></i> 128GB</span>
+              <span class="product-feature"><i class="fas fa-battery-full"></i> 4500mAh</span>
+            </div>
+            <div class="product-actions">
+              <a href="#" class="product-btn">Add to Cart</a>
+              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              <button class="compare-btn"><i class="fas fa-exchange-alt"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card" data-category="flagship">
+          <span class="product-badge">Premium</span>
+          <div class="product-img">
+            <img src="/api/placeholder/400/320" alt="V-Phone Ultra">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">V-Phone Ultra</h3>
+            <div class="product-price">$1099.99</div>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(74)</span>
+            </div>
+            <div class="product-features">
+              <span class="product-feature"><i class="fas fa-microchip"></i> 12GB RAM</span>
+              <span class="product-feature"><i class="fas fa-memory"></i> 512GB</span>
+              <span class="product-feature"><i class="fas fa-battery-full"></i> 5000mAh</span>
+            </div>
+            <div class="product-actions">
+              <a href="#" class="product-btn">Add to Cart</a>
+              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              <button class="compare-btn"><i class="fas fa-exchange-alt"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination -->
+    <div class="container">
+      <div class="pagination">
+        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn">2</button>
+        <button class="pagination-btn">3</button>
+        <button class="pagination-btn"><i class="fas fa-ellipsis-h"></i></button>
+        <button class="pagination-btn">10</button>
+        <button class="pagination-btn"><i class="fas fa-angle-right"></i></button>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Why Choose V-Phone</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-truck-fast"></i>
+            </div>
+            <h3 class="feature-title">Fast Shipping</h3>
+            <p>Free delivery for all orders over $50 with 2-day express shipping available.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="feature-title">Warranty Protection</h3>
+            <p>All our products come with a 2-year standard warranty with extended options.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <h3 class="feature-title">Easy Returns</h3>
+            <p>30-day hassle-free return policy with no questions asked.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3 class="feature-title">24/7 Support</h3>
+            <p>Our customer service team is available round the clock to assist you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="container">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter to receive updates about new products, special offers, and exclusive promotions.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address">
+          <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+        </form>
+      </div>
     </section>
   </main>
 
+  <!-- Footer Section -->
   <footer>
-    <p>&copy; 2023 V-Phone. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>V-Phone</h3>
+          <p>Delivering cutting-edge mobile technology to enhance your digital lifestyle since 2015.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="promotion.html">Promotions</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Customer Service</h3>
+          <ul class="footer-links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Jakarta, Indonesia</li>
+            <li><i class="fas fa-phone"></i> +62 21 1234 5678</li>
+            <li><i class="fas fa-envelope"></i> info@vphone.id</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 V-Phone. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
-  <script src="js/products.js"></script>
+  <script>
+    // Mobile Menu Toggle
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('open');
+    });
+
+    // Product Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Change active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Filter products
+        const filter = button.getAttribute('data-filter');
+        
+        productCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Wishlist button functionality
+    const wishlistButtons = document.querySelectorAll('.wishlist-btn');
+    
+    wishlistButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const icon = this.querySelector('i');
+        if (icon.classList.contains('far')) {
+          icon.classList.remove('far');
+          icon.classList.add('fas');
+          icon.style.color = '#f43f5e';
+        } else {
+          icon.classList.remove('fas');
+          icon.classList.add('far');
+          icon.style.color = '#64748b';
+        }
+      });
+    });
+
+    // Pagination functionality
+    const paginationButtons = document.querySelectorAll('.pagination-btn');
+    
+    paginationButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        paginationButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        // You would typically load different products here
+      });
+    });
+  </script>
 </body>
 </html>
