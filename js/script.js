@@ -1,26 +1,36 @@
-// Slider untuk Home Page
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.slider');
-  slider.innerHTML = `
-    <img src="assets/slide1.jpg" alt="Promo 1">
-    <img src="assets/slide2.jpg" alt="Promo 2">
-  `;
 
-  // Best Seller Products
-  const products = [
-    { name: 'V-Phone X', price: '$299', image: 'assets/phone1.jpg' },
-    { name: 'V-Phone Pro', price: '$399', image: 'assets/phone2.jpg' }
-  ];
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".slider-dot");
 
-  const productsContainer = document.querySelector('.products');
-  products.forEach(product => {
-    productsContainer.innerHTML += `
-      <div class="product-card">
-        <img src="${product.image}" alt="${product.name}">
-        <h3>${product.name}</h3>
-        <p>${product.price}</p>
-        <button>Buy Now</button>
-      </div>
-    `;
-  });
-});
+        function showSlide(index) {
+          slides.forEach((slide) => slide.classList.remove("active"));
+          dots.forEach((dot) => dot.classList.remove("active"));
+
+          slides[index].classList.add("active");
+          dots[index].classList.add("active");
+        }
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+          });
+        });
+
+        setInterval(() => {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }, 5000);
+
+        const menuBtn = document.querySelector(".mobile-menu-btn");
+        const nav = document.querySelector("nav");
+
+        if (menuBtn) {
+          menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("open");
+          });
+        }
+      });
+    
