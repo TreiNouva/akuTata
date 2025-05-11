@@ -127,17 +127,23 @@ nav a.active {
 
 .slide:nth-child(1) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/api/placeholder/1200/500");
+    url("../assets/img/w273.png");
+  background-size: contain;
+  background-position: center;
 }
 
 .slide:nth-child(2) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/api/placeholder/1200/500");
+    url("../assets/img/w273 (1).png");
+  background-size: contain;
+  background-position: center;
 }
 
 .slide:nth-child(3) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/api/placeholder/1200/500");
+    url("../assets/img/w273 (2).png");
+  background-size: contain;
+  background-position: center;
 }
 
 .slide-content {
