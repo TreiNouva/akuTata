@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V-Phone - About Us</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .about-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/img/about-hero.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .about-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      margin-bottom: 3rem;
+    }
+    
+    .about-section {
+      margin-bottom: 3rem;
+    }
+    
+    .about-section h2 {
+      color: var(--primary-dark);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--secondary-color);
+      display: inline-block;
+    }
+    
+    .about-section p {
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+    
+    .mission-vision {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .mission-card, .vision-card {
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+      color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    
+    .mission-card::before, .vision-card::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .mission-card h3, .vision-card h3 {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .mission-card i, .vision-card i {
+      margin-right: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    .team-section {
+      text-align: center;
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .team-member {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+    
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+    
+    .member-img {
+      height: 200px;
+      background-color: #f3f4f6;
+    }
+    
+    .member-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .member-info {
+      padding: 1.5rem;
+    }
+    
+    .member-name {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .member-role {
+      color: var(--primary-color);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-section {
+      margin-top: 3rem;
+    }
+    
+    .contact-info {
+      background-color: #f9fafb;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 1.5rem;
+    }
+    
+    .contact-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .contact-icon {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+    
+    .contact-text h4 {
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
+    }
+    
+    .social-links-about {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .social-links-about a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links-about a:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+    
+    @media screen and (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .mission-vision {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <i class="fas fa-mobile-alt"></i>
+        <span>V-Phone</span>
+      </div>
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="promotion.html">Promotion</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="about-hero">
+    <div class="container">
+      <h1>About V-Phone</h1>
+      <p>Delivering Quality Smartphones at Affordable Prices</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="about-content">
+      <div class="about-section">
+        <h2>Our Story</h2>
+        <p>V-Phone entered the market as a smartphone brand that prioritizes quality at affordable prices. Since our establishment in 2018, we have been committed to providing advanced technology that can be enjoyed by people from all walks of life.</p>
+        <p>With a team of experts experienced in the telecommunications industry, we continuously innovate to deliver products that meet the needs of users worldwide.</p>
+      </div>
+
+      <div class="about-section">
+        <h2>Mission & Vision</h2>
+        <div class="mission-vision">
+          <div class="mission-card">
+            <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+            <p>To provide high-quality smartphones at affordable prices, bridge the digital divide, and ensure everyone can enjoy advanced technology without financial constraints.</p>
+          </div>
+          <div class="vision-card">
+            <h3><i class="fas fa-eye"></i> Our Vision</h3>
+            <p>To become a leader in the smartphone industry known for quality, innovation, and affordability, while creating a positive impact on society around the world.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-section team-section">
+        <h2>Our Team</h2>
+        <p>Behind V-Phone's success is a team of dedicated professionals committed to delivering the best products and services.</p>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/300" alt="CEO">
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Robert Chen</h3>
+              <p class="member-role">CEO & Founder</p>
+              <p>Over 15 years of experience in the telecommunications industry.</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/300" alt="CTO">
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Emily Jackson</h3>
+              <p class="member-role">Chief Technology Officer</p>
+              <p>Technology expert focusing on mobile device development.</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/300" alt="CMO">
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Michael Rodriguez</h3>
+              <p class="member-role">Chief Marketing Officer</p>
+              <p>Marketing specialist with a deep understanding of global markets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-section contact-section">
+        <h2>Contact Us</h2>
+        <p>We'd love to connect with you. Don't hesitate to reach out through any of the following channels:</p>
+        <div class="contact-info">
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <p>support@vphone.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <p>+1 (555) 123-4567</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Headquarters</h4>
+                <p>88 Tech Boulevard, San Francisco, CA</p>
+              </div>
+            </div>
+          </div>
+          <div class="social-links-about">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>V-Phone</h3>
+          <p>Quality smartphones at affordable prices for everyone.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope"></i> support@vphone.com</li>
+            <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-map-marker-alt"></i> 88 Tech Boulevard, San Francisco</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 V-Phone. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('nav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

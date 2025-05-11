@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
-  <!-- Header Section -->
   <header>
     <div class="container">
       <div class="header-content">
@@ -34,7 +33,6 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero-section">
       <div class="container">
         <h2>Discover Our Premium Smartphones</h2>
@@ -43,7 +41,6 @@
       </div>
     </section>
 
-    <!-- Product Filter Section -->
     <section class="container" id="product-categories">
       <h2 class="section-title">Our Products</h2>
       <div class="product-filter">
@@ -55,10 +52,8 @@
       </div>
     </section>
 
-    <!-- Product List Section -->
     <section class="container">
       <div class="product-list" id="product-list">
-        <!-- Product 1 -->
         <div class="product-card" data-category="gaming flagship">
           <span class="product-badge">New</span>
           <div class="product-img">
@@ -88,7 +83,6 @@
           </div>
         </div>
 
-        <!-- Product 2 -->
         <div class="product-card" data-category="camera flagship">
           <div class="product-img">
             <img src="/api/placeholder/400/320" alt="V-Phone Camera Max">
@@ -117,7 +111,6 @@
           </div>
         </div>
 
-        <!-- Product 3 -->
         <div class="product-card" data-category="budget">
           <span class="product-badge">Best Seller</span>
           <div class="product-img">
@@ -147,7 +140,6 @@
           </div>
         </div>
 
-        <!-- Product 4 -->
         <div class="product-card" data-category="camera budget">
           <div class="product-img">
             <img src="/api/placeholder/400/320" alt="V-Phone Camera Lite">
@@ -176,7 +168,6 @@
           </div>
         </div>
 
-        <!-- Product 5 -->
         <div class="product-card" data-category="gaming">
           <div class="product-img">
             <img src="/api/placeholder/400/320" alt="V-Phone Gaming Lite">
@@ -205,7 +196,6 @@
           </div>
         </div>
 
-        <!-- Product 6 -->
         <div class="product-card" data-category="flagship">
           <span class="product-badge">Premium</span>
           <div class="product-img">
@@ -237,7 +227,6 @@
       </div>
     </section>
 
-    <!-- Pagination -->
     <div class="container">
       <div class="pagination">
         <button class="pagination-btn active">1</button>
@@ -249,7 +238,6 @@
       </div>
     </div>
 
-    <!-- Features Section -->
     <section class="features">
       <div class="container">
         <h2 class="section-title">Why Choose V-Phone</h2>
@@ -286,7 +274,6 @@
       </div>
     </section>
 
-    <!-- Newsletter Section -->
     <section class="newsletter">
       <div class="container">
         <h2>Stay Updated</h2>
@@ -299,7 +286,6 @@
     </section>
   </main>
 
-  <!-- Footer Section -->
   <footer>
     <div class="container">
       <div class="footer-content">
@@ -348,63 +334,8 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile Menu Toggle
-    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-      document.querySelector('nav').classList.toggle('open');
-    });
-
-    // Product Filtering
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const productCards = document.querySelectorAll('.product-card');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        // Change active button
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-
-        // Filter products
-        const filter = button.getAttribute('data-filter');
-        
-        productCards.forEach(card => {
-          if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-
-    // Wishlist button functionality
-    const wishlistButtons = document.querySelectorAll('.wishlist-btn');
+  <script src="js/product.js">
     
-    wishlistButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const icon = this.querySelector('i');
-        if (icon.classList.contains('far')) {
-          icon.classList.remove('far');
-          icon.classList.add('fas');
-          icon.style.color = '#f43f5e';
-        } else {
-          icon.classList.remove('fas');
-          icon.classList.add('far');
-          icon.style.color = '#64748b';
-        }
-      });
-    });
-
-    // Pagination functionality
-    const paginationButtons = document.querySelectorAll('.pagination-btn');
-    
-    paginationButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        paginationButtons.forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
-        // You would typically load different products here
-      });
-    });
-  </script>
+  </script>>
 </body>
 </html>

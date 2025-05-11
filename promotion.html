@@ -3,38 +3,315 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>V-Phone - Promotion</title>
+  <title>V-Phone - Special Promotions</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/promotion.css">
 </head>
 <body>
+  <!-- Header Section -->
   <header>
-    <h1>V-Phone</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="promotion.html" class="active">Promotion</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="register.html">Register</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <i class="fas fa-mobile-alt"></i>
+          <span>V-Phone</span>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="products.html"><i class="fas fa-mobile"></i> Products</a></li>
+            <li><a href="promotion.html" class="active"><i class="fas fa-percent"></i> Promotion</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="promo-cards">
-      <div class="promo-card">
-        <h2>Cashback 10%</h2>
-        <p>Dapatkan cashback untuk pembelian pertama!</p>
+    <!-- Promo Hero Section -->
+    <section class="promo-hero">
+      <div class="container">
+        <h2>Special V-Phone Offers</h2>
+        <p>Discover amazing deals, discounts, and limited-time offers on our latest smartphones and accessories.</p>
+        
+        <div class="promo-countdown">
+          <div class="countdown-title">Flash Sale Ends In:</div>
+          <div class="countdown-timer">
+            <div class="countdown-box">
+              <div class="countdown-number" id="days">02</div>
+              <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-number" id="hours">18</div>
+              <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-number" id="minutes">45</div>
+              <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-number" id="seconds">32</div>
+              <div class="countdown-label">Seconds</div>
+            </div>
+          </div>
+        </div>
+        
+        <a href="#current-promos" class="btn"><i class="fas fa-tag"></i> View All Promotions</a>
       </div>
-      <div class="promo-card">
-        <h2>Gratis Ongkir</h2>
-        <p>Beli 2 produk, gratis ongkir ke seluruh Indonesia.</p>
+    </section>
+
+    <!-- Featured Promo Section -->
+    <section class="promo-section container">
+      <h2 class="section-title" id="current-promos">Current Promotions</h2>
+      
+      <div class="promo-grid">
+        <div class="promo-feature">
+          <div class="promo-feature-content">
+            <h3 class="promo-feature-title">V-Phone Summer Festival</h3>
+            <p class="promo-feature-description">Get up to 30% off on selected smartphones and accessory bundles. Plus, enjoy free shipping nationwide for all purchases above $50.</p>
+            <a href="#" class="btn">Shop Now</a>
+          </div>
+        </div>
+        
+        <div class="promo-col-8">
+          <div class="promo-cards">
+            <!-- Promo Card 1 -->
+            <div class="promo-card">
+              <span class="promo-badge">Cashback</span>
+              <div class="promo-image">
+                <img src="/api/placeholder/400/200" alt="Cashback Promo">
+              </div>
+              <div class="promo-content">
+                <h3 class="promo-title">10% Cashback</h3>
+                <p class="promo-description">Get 10% cashback on your first purchase. Perfect opportunity for new customers!</p>
+                <div class="promo-details">
+                  <div class="promo-period">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Valid until May 25, 2025</span>
+                  </div>
+                  <div class="promo-save">Save up to $100</div>
+                </div>
+                <a href="#" class="promo-btn">Get Offer</a>
+              </div>
+            </div>
+            
+            <!-- Promo Card 2 -->
+            <div class="promo-card">
+              <span class="promo-badge">Free Shipping</span>
+              <div class="promo-image">
+                <img src="/api/placeholder/400/200" alt="Free Shipping Promo">
+              </div>
+              <div class="promo-content">
+                <h3 class="promo-title">Free Shipping</h3>
+                <p class="promo-description">Buy any 2 products and get free shipping to all of Indonesia. No minimum purchase required!</p>
+                <div class="promo-details">
+                  <div class="promo-period">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Valid until June 30, 2025</span>
+                  </div>
+                  <div class="promo-save">Save up to $20</div>
+                </div>
+                <a href="#" class="promo-btn">Get Offer</a>
+              </div>
+            </div>
+            
+            <!-- Promo Card 3 -->
+            <div class="promo-card">
+              <span class="promo-badge">Bundle Deal</span>
+              <div class="promo-image">
+                <img src="/api/placeholder/400/200" alt="Bundle Deal Promo">
+              </div>
+              <div class="promo-content">
+                <h3 class="promo-title">Accessory Bundle</h3>
+                <p class="promo-description">Buy any V-Phone smartphone and get 25% off on selected accessories bundle.</p>
+                <div class="promo-details">
+                  <div class="promo-period">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Valid until May 31, 2025</span>
+                  </div>
+                  <div class="promo-save">Save up to $50</div>
+                </div>
+                <a href="#" class="promo-btn">Get Offer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="promo-col-4">
+          <div class="coupon-card">
+            <div class="coupon-header">
+              <h3 class="coupon-title">Special Discount</h3>
+              <p class="coupon-subtitle">Use this code at checkout</p>
+            </div>
+            <div class="coupon-code">
+              VPHONE25
+              <button class="coupon-copy" id="copy-btn">Copy</button>
+            </div>
+            <p class="coupon-terms">Valid for all products. Cannot be combined with other promotions. Expires on June 15, 2025.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Redeem Section -->
+    <section class="steps-section">
+      <div class="container">
+        <h2 class="section-title">How to Redeem Promotions</h2>
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3 class="step-title">Choose Products</h3>
+            <p class="step-description">Browse our collection and add your favorite products to cart.</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon">
+              <i class="fas fa-tag"></i>
+            </div>
+            <h3 class="step-title">Apply Promo Code</h3>
+            <p class="step-description">Enter your promo code at checkout to get your discount.</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon">
+              <i class="fas fa-credit-card"></i>
+            </div>
+            <h3 class="step-title">Complete Payment</h3>
+            <p class="step-description">Pay securely and confirm your order with discount applied.</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-icon">
+              <i class="fas fa-box-open"></i>
+            </div>
+            <h3 class="step-title">Enjoy Your Purchase</h3>
+            <p class="step-description">Receive your order and enjoy your new V-Phone products!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            Can I combine multiple promotional offers?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Unfortunately, most promotional offers cannot be combined with other ongoing promotions unless specifically stated. Each promotion has its own terms and conditions that will be clearly stated on the offer details.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            How do I apply a promo code?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            You can apply a promo code during the checkout process. After adding products to your cart, proceed to checkout where you'll find a field to enter your promo code. Once entered, click "Apply" and the discount will be automatically calculated.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            When will I receive my cashback?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Cashback is typically processed within 7-14 business days after your order has been delivered and confirmed. The cashback amount will be credited to your V-Phone account which can be used for future purchases.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            Are promotions valid for international shipping?
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Most promotions are valid for domestic orders within Indonesia. For international shipping, promotional offers may vary. Please check the specific terms and conditions of each promotion or contact our customer service for more information.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="container">
+        <h2>Get Exclusive Promotions</h2>
+        <p>Subscribe to our newsletter to receive the latest updates, exclusive offers, and early access to upcoming promotions.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address">
+          <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+        </form>
       </div>
     </section>
   </main>
 
+  <!-- Footer Section -->
   <footer>
-    <p>&copy; 2023 V-Phone. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>V-Phone</h3>
+          <p>Delivering cutting-edge mobile technology to enhance your digital lifestyle since 2015.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="promotion.html">Promotions</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Customer Service</h3>
+          <ul class="footer-links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Jakarta, Indonesia</li>
+            <li><i class="fas fa-phone"></i> +62 21 1234 5678</li>
+            <li><i class="fas fa-envelope"></i> info@vphone.id</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 V-Phone. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
+  <script src="js/promotion.js">
+  </script>
 </body>
 </html>
