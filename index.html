@@ -1,41 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>V-Phone - Home</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <h1>V-Phone</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="promotion.html">Promotion</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="register.html">Register</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="slider">
-      <!-- Image slider akan diisi dengan JavaScript -->
-    </section>
-    <section class="best-seller">
-      <h2>Best Seller</h2>
-      <div class="products">
-        <!-- Produk akan diisi dengan JavaScript -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V-Phone - Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <i class="fas fa-mobile-alt"></i>
+          <span>V-Phone</span>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="promotion.html">Promotion</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <footer>
-    <p>&copy; 2023 V-Phone. All rights reserved.</p>
-  </footer>
+    <main>
+      <section class="slider">
+        <div class="slide active">
+          <div class="slide-content">
+            <h2>Discover the Latest Smartphones</h2>
+            <p>
+              Explore our collection of premium smartphones with cutting-edge
+              technology and sleek designs.
+            </p>
+            <a href="products.html" class="btn">Shop Now</a>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h2>Exclusive Deals & Offers</h2>
+            <p>
+              Get amazing discounts on our top smartphone models. Limited time
+              offers available!
+            </p>
+            <a href="promotion.html" class="btn">View Offers</a>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h2>Premium Accessories</h2>
+            <p>
+              Complete your smartphone experience with our range of high-quality
+              accessories.
+            </p>
+            <a href="products.html" class="btn">Explore</a>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <div class="slider-dot active"></div>
+          <div class="slider-dot"></div>
+          <div class="slider-dot"></div>
+        </div>
+      </section>
 
-  <script src="js/script.js"></script>
-</body>
+      <section class="container">
+        <h2 class="section-title">Best Sellers</h2>
+        <div class="products">
+          <div class="product-card">
+            <div class="product-img">
+              <img src="/api/placeholder/300/200" alt="Smartphone Model X" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">V-Phone Pro X</h3>
+              <div class="product-price">$999.99</div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(120)</span>
+              </div>
+              <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="/api/placeholder/300/200" alt="Smartphone Model Y" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">V-Phone Lite</h3>
+              <div class="product-price">$599.99</div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(98)</span>
+              </div>
+              <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="/api/placeholder/300/200" alt="Smartphone Model Z" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">V-Phone Ultra</h3>
+              <div class="product-price">$1299.99</div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(156)</span>
+              </div>
+              <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="/api/placeholder/300/200" alt="Smartphone Model A" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">V-Phone Mini</h3>
+              <div class="product-price">$499.99</div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                <span>(84)</span>
+              </div>
+              <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container">
+          <h2 class="section-title">Why Choose V-Phone?</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-shipping-fast"></i>
+              </div>
+              <h3 class="feature-title">Fast Delivery</h3>
+              <p>
+                Free shipping on all orders with delivery within 2-3 business
+                days.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3 class="feature-title">Secure Payment</h3>
+              <p>
+                Multiple secure payment options for a hassle-free checkout
+                experience.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-undo"></i>
+              </div>
+              <h3 class="feature-title">Easy Returns</h3>
+              <p>30-day return policy with no questions asked.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h3 class="feature-title">24/7 Support</h3>
+              <p>
+                Our customer service team is available around the clock to
+                assist you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <div class="container">
+          <h2>Subscribe to Our Newsletter</h2>
+          <p>
+            Stay updated with the latest smartphone releases, exclusive deals,
+            and tech news.
+          </p>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>V-Phone</h3>
+            <p>
+              Your trusted destination for premium smartphones and accessories.
+              We offer the latest technology at competitive prices.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="promotion.html">Promotions</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Tech Street, City
+              </li>
+              <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+              <li><i class="fas fa-envelope"></i> info@v-phone.com</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul class="footer-links">
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Return Policy</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2023 V-Phone. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Simple Image Slider
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".slider-dot");
+
+        function showSlide(index) {
+          slides.forEach((slide) => slide.classList.remove("active"));
+          dots.forEach((dot) => dot.classList.remove("active"));
+
+          slides[index].classList.add("active");
+          dots[index].classList.add("active");
+        }
+
+        // Initialize dots click event
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+          });
+        });
+
+        // Auto slide
+        setInterval(() => {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }, 5000);
+
+        // Mobile menu toggle
+        const menuBtn = document.querySelector(".mobile-menu-btn");
+        const nav = document.querySelector("nav");
+
+        if (menuBtn) {
+          menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("open");
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
